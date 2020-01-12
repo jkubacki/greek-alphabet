@@ -6,11 +6,11 @@ total = 0
 correct = 0
 wrong = 0
 
-puts "What sound does this letter do? Type exit to exit."
+puts 'What sound does this letter do? Type exit to exit.'
 
 while true
   random_letter = alphabet.sample
-  random_case = rand(2).zero? ? :capital : :small
+  random_case = %i[capital small].sample
 
   puts ''
   puts random_letter[random_case]
@@ -32,5 +32,4 @@ while true
 
   percentage = correct * 100 / total
   puts "#{correct}/#{total} => #{percentage}%"
-
 end
